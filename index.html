@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <script src="./main.js"></script>
+    <title>Luôn Cà Phê</title>
+</head>
+<body>
+    <div id="wapper">
+        <!-- HEADER -->
+        <div id="header">
+            <div id="leftNav" class="nav">
+                <ul class="list-inline">
+                    <li class="list-item">
+                        <a href="">Câu chuyện</a>
+                        <ul class="sub-list">
+                            <li class="sub-list-item"><a href="">Câu chuyện</a></li>
+                            <li class="sub-list-item"><a href="">Câu chuyện</a></li>
+                            <li class="sub-list-item"><a href="">Câu chuyện</a></li>
+                        </ul>
+                    </li>
+                    <li class="list-item"><a href="">Bảng tin</a></li>
+                    <li class="list-item"><a href="">Thực Đơn</a></li>
+                </ul>
+            </div>
+            <div id="logoNav" class="nav">
+                <a href=""><img src="./assets/img/logo/luon_logo_white.png" alt="" class="logo"></a>
+            </div>
+            <div id="rightNav" class="nav">
+                <ul class="list-inline">
+                    <li class="list-item"><a href="">Khuyến mãi</a></li>
+                    <li class="list-item"><a href="">Tuyển dụng</a></li>
+                    <li class="list-item"><a href="">Liên hệ</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SLIDER -->
+        <div class="slider">
+            <div class="image-contain-slider">
+                <img src="./assets/img/slider/slider_6.jpg" id="lastClone" alt="">
+                <img src="./assets/img/slider/slider_1.jpg" alt="">
+                <img src="./assets/img/slider/slider_2.jpg" alt="">
+                <img src="./assets/img/slider/slider_3.jpg" alt="">
+                <img src="./assets/img/slider/slider_4.jpg" alt="">
+                <img src="./assets/img/slider/slider_5.jpg" alt="">
+                <img src="./assets/img/slider/slider_6.jpg" alt="">
+                <img src="./assets/img/slider/slider_1.jpg" id="firstClone" alt="">
+            </div>
+            
+            <div class="slider-button">
+                <i class="fas fa-angle-double-left fa-2x" onclick="previous_picture()"></i>
+                <i class="fas fa-angle-double-right fa-2x" onclick="next_picture()"></i>
+            </div>
+            <!-- <div id="slider-text">
+                <div class="main-text">Hello November</div>
+                <div class="sub-text">hace a nice month!</div>
+            </div> -->
+        </div>
+
+        <!-- CONTENT -->
+        <div id="content">
+
+        </div>
+
+        <!-- FOOTER -->
+        <div id="footer">
+            
+        </div>
+    </div>
+
+    <script>
+        var imgSlider = document.querySelector('.image-contain-slider');
+        var allImgs = document.querySelectorAll('.image-contain-slider img');
+        
+
+        let counter = 1;
+        const size = allImgs[4].clientWidth;
+
+        imgSlider.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+
+        function next_picture(){
+            if(counter >= allImgs.length -1 ) return;
+            imgSlider.style.transition = "transform 0.4s ease-in-out";
+            counter++;
+            imgSlider.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        }
+
+
+        function previous_picture(){
+            if (counter <= 0) return;
+            imgSlider.style.transition = "transform 0.4s ease-in-out";
+            counter--;
+            imgSlider.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        }
+
+        imgSlider.addEventListener('transitionend', ()=>{
+            if (allImgs[counter].id === 'lastClone'){
+                imgSlider.style.transition = "none";
+                counter = allImgs.length - 2;
+                imgSlider.style.transform = 'translateX(' + (-size * counter) + 'px)';
+            }
+
+            if (allImgs[counter].id === 'firstClone'){
+                imgSlider.style.transition = "none";
+                counter = allImgs.length - counter;
+                imgSlider.style.transform = 'translateX(' + (-size * counter) + 'px)';
+            }
+        });
+    </script>
+</body>
+</html>

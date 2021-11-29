@@ -1,0 +1,143 @@
+:root {
+  --alot-brown: #865439;
+  --brown: #c68b59;
+  --little-brown: #fcdec0;
+  --blue: #8fc1d4;
+}
+@font-face {
+  font-family: "cubano";
+  src: url(./../fonts/iCielBCCubano-Normal.otf);
+}
+@font-face {
+  font-family: "franko";
+  src: url(./../fonts/SVN-Franko.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+a {
+  text-decoration: none;
+  display: block;
+}
+li {
+  list-style-type: none;
+  display: block;
+}
+ul {
+  display: flex;
+}
+
+#wapper {
+  width: 80%;
+  margin: auto;
+}
+
+#header {
+  height: 4rem;
+  background-color: var(--brown);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.nav {
+  display: block;
+  margin: 0px 20px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.nav .logo {
+  width: 80px;
+}
+.list-inline .list-item a:hover {
+  background-color: white;
+  color: var(--alot-brown);
+}
+.list-inline .list-item:hover .sub-list {
+  display: block;
+  z-index: 1;
+}
+
+.list-item a {
+  color: white;
+  padding: 10px;
+}
+
+.list-item {
+  margin: 0px 20px;
+  position: relative;
+}
+
+.sub-list {
+  position: absolute;
+  flex-direction: column;
+  font-size: 0.8rem;
+  display: none;
+}
+.sub-list .sub-list-item {
+  background-color: var(--brown);
+}
+
+/* SLIDER CSS */
+
+.slider {
+  width: 100%;
+  display: block;
+  border: 4px red solid;
+  overflow: hidden;
+  /* position: relative; */
+}
+
+.image-contain-slider {
+  display: flex;
+  height: 700px;
+}
+img {
+  /* display: block; */
+  width: 100%;
+}
+.slider-button {
+  position: absolute;
+  top: 45%;
+  margin: auto;
+  display: block;
+  width: 100%;
+}
+
+.fas {
+  background-color: var(--blue);
+  color: white;
+  display: block;
+  border-radius: 10%;
+  position: absolute;
+  padding: 4px;
+  cursor: pointer;
+}
+.fa-angle-double-right {
+  right: 400px;
+}
+.fa-angle-double-left {
+  left: 10px;
+}
+
+/* #slider-text {
+  background-color: var(--blue);
+  opacity: 0.5;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+.main-text {
+  font-family: "cubano";
+}
+
+.sub-text {
+  font-family: "franko";
+} */
