@@ -88,9 +88,8 @@ ul {
 .slider {
   width: 100%;
   display: block;
-  border: 4px red solid;
   overflow: hidden;
-  /* position: relative; */
+  position: relative;
 }
 
 .image-contain-slider {
@@ -119,7 +118,7 @@ img {
   cursor: pointer;
 }
 .fa-angle-double-right {
-  right: 400px;
+  right: 10px;
 }
 .fa-angle-double-left {
   left: 10px;
@@ -141,3 +140,36 @@ img {
 .sub-text {
   font-family: "franko";
 } */
+
+#content #story-about-luon{
+  background-color: var(--brown);
+  
+}
+
+#content #story-about-luon .story-text{
+  text-align: center;
+  padding: 30px;
+  font-size: 2rem;
+  font-family: "cubano";
+}
+
+#content #story-about-luon .story-content{
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+  padding: 30px;
+}
+#story-about-luon .story-explain{
+  text-align: right;
+  padding-right: 30px;
+  width: 50%;
+  font-size: 1.5rem;
+}
+
+#story-about-luon .story-explain h1{
+
+  font-size: 2rem;
+  color: #fff;
+}
+
+

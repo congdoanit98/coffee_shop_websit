@@ -16,14 +16,14 @@
             <div id="leftNav" class="nav">
                 <ul class="list-inline">
                     <li class="list-item">
-                        <a href="">Câu chuyện</a>
+                        <a href="#story-about-luon">Câu chuyện</a>
+                    </li>
+                    <li class="list-item"><a href="">Bảng tin</a>
                         <ul class="sub-list">
                             <li class="sub-list-item"><a href="">Câu chuyện</a></li>
                             <li class="sub-list-item"><a href="">Câu chuyện</a></li>
                             <li class="sub-list-item"><a href="">Câu chuyện</a></li>
-                        </ul>
-                    </li>
-                    <li class="list-item"><a href="">Bảng tin</a></li>
+                        </ul></li>
                     <li class="list-item"><a href="">Thực Đơn</a></li>
                 </ul>
             </div>
@@ -32,7 +32,7 @@
             </div>
             <div id="rightNav" class="nav">
                 <ul class="list-inline">
-                    <li class="list-item"><a href="">Khuyến mãi</a></li>
+                    <li class="list-item"><a href="">Signature</a></li>
                     <li class="list-item"><a href="">Tuyển dụng</a></li>
                     <li class="list-item"><a href="">Liên hệ</a></li>
                 </ul>
@@ -64,7 +64,22 @@
 
         <!-- CONTENT -->
         <div id="content">
-
+            <div id="story-about-luon">
+                <div class="story-text">Câu chuyện của LUÔN</div>
+                <div class="story-content">
+                    <div class="story-explain">
+                        <h1>LUÔN xuất hiện vì</h1>
+                        <p>Vì muốn lang tỏa tinh thần thưởng thức cà phê đế mọi người, cùng nhau tỉnh táo.
+                            Tự thấy bản thân có hơi phức tạp, khi thì thấy bản thân gầy, ngay sau đó lại cảm thấy béo;
+                            khi thấy thấy tóc tai dài luộm thuộm xấu xí, tí sau lại thấy vậy là ổn.
+                            Nhưng tự thấy đập dai, dễ thương, vui tánh thì luôn thường trực ạ.</p>
+                    </div>
+                    <div class="story-image">
+                        <img src="./assets/img/story/story.jpg" alt="story-image">
+                    </div>
+                </div>
+            </div>
+            
         </div>
 
         <!-- FOOTER -->
@@ -80,7 +95,6 @@
 
         let counter = 1;
         const size = imgSlider.clientWidth;
-        alert(size);
 
         imgSlider.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
@@ -113,6 +127,8 @@
                 imgSlider.style.transform = 'translateX(' + (-size * counter) + 'px)';
             }
         });
+
+        setInterval(next_picture,3000);
     </script>
 </body>
 </html>
