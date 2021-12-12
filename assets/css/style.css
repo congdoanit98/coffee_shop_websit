@@ -33,7 +33,7 @@ ul {
 }
 
 #wapper {
-  width: 80%;
+  width: 100%;
   margin: auto;
 }
 
@@ -212,7 +212,7 @@ img {
 }
 #story-about-luon .story-explain{
   text-align: center;
-  padding-right: 30px;
+  padding: 0  5%;
   width: 50%;
   font-size: 1.5rem;
 }
@@ -224,7 +224,64 @@ img {
 }
 
 #story-about-luon .story-explain p{
-  font-family: "franko";
+  font-family: 'Playfair Display', serif;
+  padding: 0 0 0 15%;
 }
 
+#story-about-luon .story-image{
+  transform: translateX(-95%);
+  transition: transform 0.4s ease-in-out;
+}
+
+#story-about-luon:hover .story-image{
+  transform: translateX(0px);
+}
+
+/* END STORY */
+
+/* START FOOTER */
+#footer{
+  display: flex;
+  flex-direction: row;
+  padding: 2% 10%;
+  font-size: 1.5rem;
+}
+
+#footer .address{
+  width: 50%;
+}
+
+#footer .footer-contact{
+  width: 50%;
+}
+
+.address .address-detail{
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+}
+
+.contact-social-media{
+  display: flex;
+  flex-direction: row;
+  font-size: 3rem;
+}
+
+.contact-social-media .fab{
+  color: var(--alot-brown);
+  ;
+}
+
+.contact-social-media a{
+  padding: 2%;
+  
+}
+.contact-social-media i{
+  transition: transform 0.2s ease-in-out;
+}
+
+
+.contact-social-media i:hover {
+  color: var(--blue);
+  transform: translateY(-8px);
+}
 
