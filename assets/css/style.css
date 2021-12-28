@@ -13,6 +13,10 @@
   src: url(./../fonts/SVN-Franko.ttf);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -46,15 +50,49 @@ ul {
   align-items: center;
 }
 .nav {
+  
   display: block;
-  margin: 0px 20px;
+  margin: 0px 1%;
   font-size: 1rem;
   text-transform: uppercase;
+  border: #8fc1d4 1px solid;
 }
+
+.nav .menu .fa-bars{
+  font-size: 2rem;
+  margin: 5px;
+  left: 2%;
+  /* display: none; */
+}
+
+.menu .menu-list{
+  background-color: #8fc1d4;
+  left: -500px;
+  top: 8%;
+  z-index: 3;
+  position: absolute;
+  flex-direction: column;
+  font-size: 3rem;
+}
+.menu .menu-list-show{
+  transform: translateX(500px);
+  transition: transform 0.2s ease-in-out;
+}
+
+
+.menu .menu-list-hide{
+  transform: translateX(-200px);
+  transition: transform 0.2s ease-in-out;
+}
+
 
 .nav .logo {
   width: 80px;
 }
+.list-inline{
+  border: olive 1px solid;
+}
+
 .list-inline .list-item a:hover {
   background-color: white;
   color: var(--alot-brown);
@@ -72,6 +110,7 @@ ul {
 .list-item {
   margin: 0px 20px;
   position: relative;
+  font-size: 1.5rem;
 }
 
 .sub-list {
@@ -82,6 +121,12 @@ ul {
 }
 .sub-list .sub-list-item {
   background-color: var(--brown);
+  font-size: 1rem;
+}
+
+
+.fas .fa-bars{
+  display: none !;
 }
 
 /* SLIDER CSS */

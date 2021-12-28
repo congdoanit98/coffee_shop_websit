@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -17,6 +18,19 @@
         <!-- HEADER -->
         <div id="header">
             <div id="leftNav" class="nav">
+
+                <div class="menu">
+                    <i class="fas fa-bars" onclick="check()"></i>
+                    
+                    <div>
+                        <ul class="menu-list">
+                            <li class="menu-sub-list-item"><a href="">Câu chuyện</a></li>
+                            <li class="menu-sub-list-item"><a href="">Câu chuyện</a></li>
+                            <li class="menu-sub-list-item"><a href="">Câu chuyện</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
                 <ul class="list-inline">
                     <li class="list-item">
                         <a href="#story-about-luon">Câu chuyện</a>
@@ -222,7 +236,14 @@
         </div>
     </div>
 
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollTrigger.min.js"></script>	
+    <script src="./main.js"></script> -->
+
     <script>
+        
+        
         var imgSlider = document.querySelector('.image-contain-slider');
         var allImgs = document.querySelectorAll('.image-contain-slider img');
         
@@ -263,6 +284,23 @@
         });
 
         setInterval(next_picture,3000);
+
+
+        // ==================================================
+        var status_menu_list = false;
+
+        function check(){
+            var menu_list = document.querySelector(".menu-list")
+
+            if(status_menu_list == false){
+                menu_list.className = "menu-list menu-list-show";
+                status_menu_list = true;
+            } else{
+                menu_list.className = "menu-list menu-list-hide";
+                status_menu_list = false;
+            }
+            
+        }
     </script>
 </body>
 </html>
