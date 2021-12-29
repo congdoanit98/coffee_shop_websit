@@ -55,33 +55,53 @@ ul {
   margin: 0px 1%;
   font-size: 1rem;
   text-transform: uppercase;
-  border: #8fc1d4 1px solid;
 }
 
-.nav .menu .fa-bars{
+.menu{
+  z-index: 2;
+  display: block;
+  width: 100%;
+  position: fixed;
+  z-index: 4;
+  top: 0px;
+  margin: 5px;
+  left: -5px;
+}
+
+.menu .fa-bars{
   font-size: 2rem;
   margin: 5px;
   left: 2%;
-  /* display: none; */
+  position: relative;
+  display: none;
 }
 
+.menu .fa-bars{
+  font-size: 2rem;
+  margin: 5px;
+  left: 2%;
+  position: relative;
+}
+
+
 .menu .menu-list{
+  width: 100%;
   background-color: #8fc1d4;
-  left: -500px;
-  top: 8%;
+  left: -100%;
   z-index: 3;
   position: absolute;
   flex-direction: column;
   font-size: 3rem;
+  padding: 10px;
 }
 .menu .menu-list-show{
-  transform: translateX(500px);
+  transform: translateX(100%);
   transition: transform 0.2s ease-in-out;
 }
 
 
 .menu .menu-list-hide{
-  transform: translateX(-200px);
+  transform: translateX(-100%);
   transition: transform 0.2s ease-in-out;
 }
 
@@ -89,9 +109,7 @@ ul {
 .nav .logo {
   width: 80px;
 }
-.list-inline{
-  border: olive 1px solid;
-}
+
 
 .list-inline .list-item a:hover {
   background-color: white;
@@ -140,7 +158,7 @@ ul {
 
 .image-contain-slider {
   display: flex;
-  height: 700px;
+  height: 100%;
 }
 img {
   /* display: block; */
@@ -244,7 +262,7 @@ img {
 
 #content #story-about-luon .story-text{
   text-align: center;
-  padding: 30px;
+  padding: 2%;
   font-size: 2rem;
   font-family: "cubano";
 }
@@ -253,7 +271,7 @@ img {
   display: flex;
   flex-direction: row;
   padding: 0.5rem;
-  padding: 30px;
+  padding: 2%;
 }
 #story-about-luon .story-explain{
   text-align: center;
@@ -262,18 +280,21 @@ img {
   font-size: 1.5rem;
 }
 
-#story-about-luon .story-explain h1{
-
-  font-size: 2rem;
-  color: #fff;
+#dots{
+  display: none;
+}
+#stoty-more{
+  padding: 0;
 }
 
-#story-about-luon .story-explain p{
+
+#story-about-luon .story-explain p, span{
   font-family: 'Playfair Display', serif;
-  padding: 0 0 0 15%;
+  padding: 0 0 0 10%;
 }
 
 #story-about-luon .story-image{
+  width: 45%;
   transform: translateX(-95%);
   transition: transform 0.4s ease-in-out;
 }
@@ -330,3 +351,39 @@ img {
   transform: translateY(-8px);
 }
 
+/* Responsive  */
+
+@media only screen and (max-width: 800px){
+  #leftNav{
+    display: none;
+  }
+
+  #rightNav{
+    display: none;
+  }
+  
+  .menu .fa-bars{
+    display: block;
+    width: 40px;
+  }
+  .image-contain-slider {
+    display: flex;
+    height: 100%;
+  }
+  #content #story-about-luon .story-text{
+    font-size: 1rem;
+  }
+
+
+  #story-about-luon .story-explain{
+    font-size: 0.6rem;
+  }
+
+  #dots{
+    display: block;
+  }
+
+  #stoty-more{
+    display: none;
+  }
+}
