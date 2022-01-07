@@ -366,6 +366,11 @@ img {
     display: block;
     width: 40px;
   }
+
+  .menu .menu-list{
+    font-size: 2rem;
+  }
+
   .image-contain-slider {
     display: flex;
     height: 100%;
@@ -385,5 +390,24 @@ img {
 
   #stoty-more{
     display: none;
+  }
+
+  .menu-category .category-contain .menu-item{
+    
+    width: 40%;
+  
+  }
+  
+  #footer{
+  
+    font-size: 1rem;
+  }
+
+  .address .address-detail{
+    font-size: 0.5rem;
+  }
+
+  .contact-social-media{
+    font-size: 1.5rem;
   }
 }
